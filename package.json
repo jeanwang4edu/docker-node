@@ -1,9 +1,9 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Simple node and express backend",
+  "description": "Simple node and express backend with Docker",
   "main": "index.js",
-  "repository": "github:mannyhenri/node-docker",
+  "repository": "jeanwang4edu/docker-node.git",
   "scripts": {
     "start": "nodemon ./index.js --exec babel-node -e js"
   },
