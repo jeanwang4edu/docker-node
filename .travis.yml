@@ -1,0 +1,16 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t $DOCKER_USERNAME/node-test .
+  - docker images $DOCKER_USERNAME/node-test
+  
+before_deploy:
+  - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
+deploy:
+  provider: script
+  script: docker push $DOCKER_USERNAME/node-test 
+  on:
+    branch: master
